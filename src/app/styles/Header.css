@@ -1,0 +1,53 @@
+.left-side-menu-drawer{
+    min-width: 340px;
+    overflow: auto;
+}
+.left-side-menu-drawer ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.left-side-menu-drawer ul li a{
+    border: 1px solid;
+    width: 80px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: 11px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-side-menu-drawer .tabs .tabs-btn{
+    gap: 30px;
+    align-items: center;
+}
+.left-side-menu-drawer .tabs .tabs-btn button{
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    padding: 0px;
+}
+.left-side-menu-drawer .tabs .tabs-btn button.active{
+    border-bottom: 1px solid;
+}
+.left-side-menu-drawer .accordion button{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.left-side-menu-drawer .accordion button:hover{
+    color: #87CEEB;
+}
+.right-side-menu button{
+    text-transform: uppercase;
+}
+.right-side-menu li{
+    list-style-type: none;
+}
+.right-side-menu li a{
+    text-transform: uppercase;
+}
+.site-logo{
+    font-size: 22px;
+    font-weight: 600;
+}
