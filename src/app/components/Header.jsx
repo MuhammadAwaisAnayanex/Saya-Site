@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import siteLogo from "@/app/assets/images/siteLogo/site-logo.png"
-import Image from 'next/image';
 import Link from 'next/link';
 import "@/app/styles/Header.css"
+import { usePathname } from 'next/navigation';
 export default function Header() {
+  const pathname = usePathname(); // ✅ Get current path
+  const isHomePage = pathname === '/'; // ✅ Check if it's home
+
   const [isLeftMenuOpen, setIsLeftMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null); 
@@ -14,7 +16,9 @@ export default function Header() {
   const [isSummerCollectionOpen, setIsSummerCollectionOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent text-white px-4 py-3 flex justify-between items-center">
+    <header className={`fixed top-0 left-0 w-full z-50 px-4 py-3 flex justify-between items-center transition-colors duration-300 ${
+      isHomePage ? 'bg-transparent text-white' : 'bg-white text-black'
+    }`}>
       {/* Left: Logo & Hamburger */}
       <div className="flex items-center space-x-4">
         <button onClick={() => setIsLeftMenuOpen(!isLeftMenuOpen)} className='cursor-pointer'>

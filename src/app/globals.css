@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.reviews-section img{
+  height: 25px;
+  width: 25px;
+}
+@media only screen and (min-width: 991px) {
+  .container{
+    max-width: 1080px;
+    margin: 0 auto;
+  }
 }

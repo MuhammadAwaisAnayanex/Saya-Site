@@ -1,0 +1,9 @@
+.slider-main-div {
+    margin: 30 10px; /* 10px on each side = 20px total between items */
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08); /* soft shadow */
+    max-width: 300px;
+  }
+  

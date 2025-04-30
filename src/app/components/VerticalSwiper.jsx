@@ -16,19 +16,25 @@ export default function VerticalSwiper() {
     const sliderData=slides
     console.log("sliderDataLibrari => ",sliderData)
   return (
-    <Swiper
-      direction="vertical"
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Pagination]}
-      className="mySwiper"
-    >
-      {
-        sliderData.map((item,index)=>{
-            return <SwiperSlide key={index}><Link href={`/collections/${item.id}`}><Image src={item.img} alt={item.img} /></Link></SwiperSlide>
-        })
-      }
-    </Swiper>
+<Swiper
+  direction="vertical"
+  pagination={{ clickable: true }}
+  modules={[Pagination]}
+  className="mySwiper h-screen" // 👈 Full viewport height
+>
+  {sliderData.map((item, index) => (
+    <SwiperSlide key={index} className="h-screen">
+      <Link href={`/collections/${item.id}`}>
+        <Image
+          src={item.img}
+          alt={item.img}
+          fill
+          className="object-cover"
+        />
+      </Link>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
   );
 }
